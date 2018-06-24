@@ -3,7 +3,7 @@ module.exports = {
     {
       name: 'laborx.profile.backend',
       script: 'bin/www',
-      watch: ['./'],
+      watch: true,
       env: {
         PORT: 3001,
         NODE_ENV: 'development',
