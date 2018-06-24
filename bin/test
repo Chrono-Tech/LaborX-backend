@@ -1,0 +1,45 @@
+#!/usr/bin/env node
+require('dotenv').config()
+require('../require')
+
+const Mocha = require('mocha')
+const fs = require('fs')
+const path = require('path')
+const { expect, should } = require('chai')
+
+global.expect = expect
+global.should = should
+
+const mocha = new Mocha()
+
+const testDir = path.join(__dirname, '../test')
+console.log(testDir)
+
+function walk (dir) {
+  let results = []
+  const list = fs.readdirSync(dir)
+  list.forEach(function (file) {
+    file = dir + '/' + file
+    const stat = fs.statSync(file)
+    if (stat && stat.isDirectory()) {
+      results = results.concat(walk(file))
+    } else results.push(file)
+  })
+  return results
+}
+
+// Add each .js file to the mocha instance
+walk(testDir)
+  .filter(file => {
+    return file.substr(-8) === '.spec.js'
+  })
+  .forEach(file => {
+    mocha.addFile(file)
+  })
+
+// Run the tests.
+mocha.run(failures => {
+  process.on('exit', function () {
+    process.exit(failures)
+  })
+})
