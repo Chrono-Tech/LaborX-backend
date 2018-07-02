@@ -5,5 +5,6 @@ module.exports = {
   limitOrderFilled: require('./lib/limitOrderFilled'),
   marketOrderExecuted: require('./lib/marketOrderExecuted'),
   transferReceived: require('./lib/transferReceived'),
-  transferSent: require('./lib/transferSent')
+  transferSent: require('./lib/transferSent'),
+  limitOrderExpired: require('./lib/limitOrderExpired')
 }
