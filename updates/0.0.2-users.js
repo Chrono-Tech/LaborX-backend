@@ -1,5 +1,6 @@
 const keystone = require('keystone')
 const { uploadCloundinaryImage, uploadKeystoneFile } = requireRoot('lib/utils')
+
 const SecurityUser = keystone.list('SecurityUser')
 const SecuritySignature = keystone.list('SecuritySignature')
 const SecurityToken = keystone.list('SecurityToken')
@@ -18,7 +19,10 @@ async function create () {
   const user4 = await SecurityUser.model.create({ name: 'RLT Holder' })
   const user5 = await SecurityUser.model.create({ name: 'AVT Holder' })
 
-  await SecurityToken.model.create({ user: user1._id })
+  await SecurityToken.model.create({
+    user: user1._id,
+    purpose: 'exchange'
+  })
 
   // 0x1134cc86b45039cc211c6d1d2e4b3c77f60207ed
   await SecuritySignature.model.create({
