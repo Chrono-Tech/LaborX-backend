@@ -9,10 +9,11 @@ const ReqruiterProfile = keystone.list('ReqruiterProfile')
 const ReqruiterService = keystone.list('ReqruiterService')
 const ReqruiterSocial = keystone.list('ReqruiterSocial')
 const WorkerProfile = keystone.list('WorkerProfile')
+const WorkerSocial = keystone.list('WorkerSocial')
 const WorkerService = keystone.list('WorkerService')
 const WorkerEmployment = keystone.list('WorkerEmployment')
-const WorkerSocial = keystone.list('WorkerSocial')
 const VerificationWorkerRequest = keystone.list('VerificationWorkerRequest')
+const VerificationReqruiterRequest = keystone.list('VerificationReqruiterRequest')
 const SecurityUser = keystone.list('SecurityUser')
 const File = keystone.list('File')
 const Image = keystone.list('Image')
@@ -93,7 +94,7 @@ async function create () {
     }
   })
 
-  const worker43PageBackground = await Image.model.create({
+  const worker4PageBackground = await Image.model.create({
     image: await uploadCloundinaryImage(
       require.resolve('./0.0.4-clients/green.png')
     )
@@ -107,7 +108,7 @@ async function create () {
     },
     verifiable: {
       intro: 'JavaScript Developer (both Frontend & Backend)',
-      pageBackground: worker43PageBackground
+      pageBackground: worker4PageBackground
     },
     custom: {
       schedule: {
@@ -157,18 +158,28 @@ async function create () {
     url: 'https://www.facebook.com/romanjosiofficial/'
   })
 
+  const reqruiter5PageBackground = await Image.model.create({
+    image: await uploadCloundinaryImage(
+      require.resolve('./0.0.4-clients/orange.png')
+    )
+  })
+
+  const reqruiter5Attachment1 = await File.model.create({
+    file: await uploadKeystoneFile(File.fields.file, {
+      path: require.resolve('./0.0.4-clients/diploma.jpg'),
+      mimetype: 'image/jpeg'
+    })
+  })
+
   const reqruiter5 = await ReqruiterProfile.model.create({
     user: user5._id,
-    intro: 'I will find you a great software developer',
-    hourlyCharge: '20',
-    currencies: [btc._id, eth._id],
-    schedule: {
-      mon: true,
-      tue: true,
-      wed: true,
-      thu: true,
-      fri: true,
-      sat: true
+    verifiable: {
+      intro: 'I will find you a great software developer',
+      pageBackground: reqruiter5PageBackground,
+      attachments: [ reqruiter5Attachment1._id ]
+    },
+    custom: {
+      showPackagesOnFirstJobBoard: true
     }
   })
 
@@ -183,7 +194,7 @@ async function create () {
     name: 'Training',
     reqruiter: reqruiter5._id,
     description: 'Training your employments',
-    fee: '120'
+    fee: '150'
   })
 
   await ReqruiterSocial.model.create({
@@ -234,5 +245,38 @@ async function create () {
     request: worker3Request._id,
     description: 'Web application development using Vue.js',
     minFee: '150'
+  })
+
+  const reqruiter5Request = await VerificationReqruiterRequest.model.create({
+    user: user5._id,
+    status: 'created',
+    verifiable: {
+      intro: 'I will find you a great software developer',
+      pageBackground: reqruiter5PageBackground,
+      attachments: [ reqruiter5Attachment1._id ]
+    },
+    custom: {
+      showPackagesOnFirstJobBoard: false
+    }
+  })
+
+  await ReqruiterService.model.create({
+    name: 'Hiring',
+    request: reqruiter5Request._id,
+    description: 'Hiring staff for your business',
+    fee: '220'
+  })
+
+  await ReqruiterService.model.create({
+    name: 'Training',
+    request: reqruiter5Request._id,
+    description: 'Training your employments',
+    fee: '200'
+  })
+
+  await ReqruiterSocial.model.create({
+    name: 'facebook',
+    request: reqruiter5Request._id,
+    url: 'https://www.facebook.com/romanjosiofficial/'
   })
 }
