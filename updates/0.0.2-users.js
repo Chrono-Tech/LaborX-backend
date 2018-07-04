@@ -18,11 +18,18 @@ async function create () {
   const user3 = await SecurityUser.model.create({ name: 'AKT Holder' })
   const user4 = await SecurityUser.model.create({ name: 'RLT Holder' })
   const user5 = await SecurityUser.model.create({ name: 'AVT Holder' })
+  const user6 = await SecurityUser.model.create({ name: 'IFT Holder' })
+  const user7 = await SecurityUser.model.create({ name: 'BTT Holder' })
+  const user8 = await SecurityUser.model.create({ name: 'SLT Holder' })
 
-  await SecurityToken.model.create({
-    user: user1._id,
-    purpose: 'exchange'
-  })
+  await SecurityToken.model.create({ user: user1._id, purpose: 'exchange' })
+  await SecurityToken.model.create({ user: user2._id, purpose: 'exchange' })
+  await SecurityToken.model.create({ user: user3._id, purpose: 'exchange' })
+  await SecurityToken.model.create({ user: user4._id, purpose: 'exchange' })
+  await SecurityToken.model.create({ user: user5._id, purpose: 'exchange' })
+  await SecurityToken.model.create({ user: user6._id, purpose: 'exchange' })
+  await SecurityToken.model.create({ user: user7._id, purpose: 'exchange' })
+  await SecurityToken.model.create({ user: user8._id, purpose: 'exchange' })
 
   // 0x1134cc86b45039cc211c6d1d2e4b3c77f60207ed
   await SecuritySignature.model.create({
@@ -57,6 +64,27 @@ async function create () {
     user: user5._id,
     type: 'ethereum-public-key',
     value: '0x8027885d6e21c40724819ffbf68eb0fb8a5d87ea186a31b34c8d036dcc1355a0a388473fd4c87a3521aeaf777ad760795a050bdc0359eb77d4df393c2b376bf6'
+  })
+
+  // 0x2943ad6701ee8c0d1fa307ac17f8c475da2d39f3
+  await SecuritySignature.model.create({
+    user: user6._id,
+    type: 'ethereum-public-key',
+    value: '0xa04bd48b8ae6c1b525a11070f3e8a083d12684ebcefc93f550cfe1c953228ed0e8681ccef919aac61f02e770e0c8d5686016337f017f762c617a583f82b39c9a'
+  })
+
+  // 0x34082bb749d5a09a9d81d0974d57c9052245cb70
+  await SecuritySignature.model.create({
+    user: user7._id,
+    type: 'ethereum-public-key',
+    value: '0x35b5ac726df32bcdae4a09bfa297f81ffa516b8b238167d7458b7fe7a9e5c875b9da8e3e01faa5eaab4ead321c5e0b266180e3690d9165e925ec8bc7f63e0cfc'
+  })
+
+  // 0x0139b2e340e14c85ab1bd008a0e877592f997f0a
+  await SecuritySignature.model.create({
+    user: user8._id,
+    type: 'ethereum-public-key',
+    value: '0x6888b4d3afaff50ccc916d77001136c01f947d41357cd88f4fe502807eea40d36abdcac2a4ae91a1f5a318b5c2d84c327b22283336a4aaec8e023e3917204d27'
   })
 
   const user1Avatar = await Image.model.create({
@@ -119,6 +147,118 @@ async function create () {
       addressLine1: 'Komsomolskiy av. 117',
       addressLine2: 'Flat 123',
       attachments: [ user1Attachment1._id, user1Attachment2._id ]
+    }
+  })
+
+  const user2Avatar = await Image.model.create({
+    image: await uploadCloundinaryImage(
+      require.resolve('./0.0.2-users/user2.png')
+    )
+  })
+
+  await VerificationRequest.model.create({
+    user: user2._id,
+    level: 'level-1',
+    level1: {
+      userName: 'Mikhail Kardaev',
+      birthDate: '1986-11-15',
+      avatar: user2Avatar._id
+    }
+  })
+
+  const user3Avatar = await Image.model.create({
+    image: await uploadCloundinaryImage(
+      require.resolve('./0.0.2-users/user3.png')
+    )
+  })
+
+  await VerificationRequest.model.create({
+    user: user3._id,
+    level: 'level-1',
+    level1: {
+      userName: 'Anna Karpova',
+      birthDate: '1993-06-15',
+      avatar: user3Avatar._id
+    }
+  })
+
+  const user4Avatar = await Image.model.create({
+    image: await uploadCloundinaryImage(
+      require.resolve('./0.0.2-users/user4.png')
+    )
+  })
+
+  await VerificationRequest.model.create({
+    user: user4._id,
+    level: 'level-1',
+    level1: {
+      userName: 'Roman Loktev',
+      birthDate: '1993-06-15',
+      avatar: user4Avatar._id
+    }
+  })
+
+  const user5Avatar = await Image.model.create({
+    image: await uploadCloundinaryImage(
+      require.resolve('./0.0.2-users/user5.png')
+    )
+  })
+
+  await VerificationRequest.model.create({
+    user: user5._id,
+    level: 'level-1',
+    level1: {
+      userName: 'Artem Valyakin',
+      birthDate: '1991-03-30',
+      avatar: user5Avatar._id
+    }
+  })
+
+  const user6Avatar = await Image.model.create({
+    image: await uploadCloundinaryImage(
+      require.resolve('./0.0.2-users/user6.png')
+    )
+  })
+
+  await VerificationRequest.model.create({
+    user: user6._id,
+    level: 'level-1',
+    level1: {
+      userName: 'Igor Fomin',
+      birthDate: '1991-05-23',
+      avatar: user6Avatar._id
+    }
+  })
+
+  const user7Avatar = await Image.model.create({
+    image: await uploadCloundinaryImage(
+      require.resolve('./0.0.2-users/user7.png')
+    )
+  })
+
+  await VerificationRequest.model.create({
+    user: user7._id,
+    level: 'level-1',
+    level1: {
+      userName: 'Boris Tarelkin',
+      birthDate: '1991-08-12',
+      avatar: user7Avatar._id
+    }
+  })
+
+  const user8Avatar = await Image.model.create({
+    image: await uploadCloundinaryImage(
+      require.resolve('./0.0.2-users/user8.png')
+    )
+  })
+
+  await VerificationRequest.model.create({
+    user: user8._id,
+    level: 'level-1',
+    level1: {
+      userName: 'Steve Leskiv',
+      birthDate: '1991-03-20',
+      avatar: user8Avatar._id
     }
   })
 }
