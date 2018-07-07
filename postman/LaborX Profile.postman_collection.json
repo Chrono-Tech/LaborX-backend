@@ -1,0 +1,1244 @@
+{
+	"info": {
+		"_postman_id": "698ad6c0-d89e-4fd7-b63f-e2db6686ca4e",
+		"name": "LaborX Profile",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/v1/security/me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{user1Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/security/me",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"security",
+						"me"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "d0611a06-2d67-4fc9-ac2e-2ea51e61aef9",
+					"name": "/api/v1/security/me",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/security/me",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"security",
+								"me"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization",
+							"name": "Access-Control-Allow-Headers",
+							"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,PUT,POST,DELETE,OPTIONS",
+							"name": "Access-Control-Allow-Methods",
+							"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"name": "Content-Encoding",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 15 Jun 2018 21:23:29 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"12b7-dBg/eQxXC3NYkYS91VjX9A\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "sameorigin",
+							"name": "x-frame-options",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Tue Jan 19 2038 08:14:07 GMT+0500 (+05)",
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"value": "en-US",
+							"key": "language"
+						}
+					],
+					"body": "{\n  \"id\": \"5b240ea06f72303391511210\",\n  \"ipfsHash\": \"Qmf6aekhWgj3tAdPxvd834wvjxEeUD55jWc8z2fymh5r8Q\",\n  \"level1\": {\n    \"submitted\": {\n      \"userName\": \"Igor Pavlenko\",\n      \"birthDate\": \"1985-10-07T00:00:00.000Z\",\n      \"avatar\": {\n        \"id\": \"5b240ea26f7230339151121b\",\n        \"url\": \"https://res.cloudinary.com/dne93b2bj/image/upload/v1529089698/qdf5nryr9cvxemzprwa2.png\"\n      },\n      \"validationComment\": null\n    },\n    \"approved\": {\n      \"userName\": \"Igor Pavlenko\",\n      \"birthDate\": \"1985-10-07T00:00:00.000Z\",\n      \"avatar\": {\n        \"id\": \"5b240ea26f7230339151121b\",\n        \"url\": \"https://res.cloudinary.com/dne93b2bj/image/upload/v1529089698/qdf5nryr9cvxemzprwa2.png\"\n      }\n    }\n  },\n  \"level2\": {\n    \"submitted\": {\n      \"email\": \"i.pavlenko@ntr1x.com\",\n      \"phone\": \"+7 (963) 089 3483\",\n      \"validationComment\": null,\n      \"isEmailConfirmed\": false,\n      \"isPhoneConfirmed\": false\n    },\n    \"approved\": {\n      \"email\": \"i.pavlenko@ntr1x.com\",\n      \"phone\": \"+7 (963) 089 3483\"\n    }\n  },\n  \"level3\": {\n    \"submitted\": {\n      \"country\": \"Russia\",\n      \"passport\": \"7505 612345\",\n      \"expirationDate\": \"2030-11-08T00:00:00.000Z\",\n      \"attachments\": [\n        {\n          \"id\": \"5b240ea26f7230339151121c\",\n          \"url\": \"http://localhost:3001/api/v1/media/file/5b240ea26f7230339151121c\",\n          \"name\": \"RussianPassport-0.jpg\",\n          \"mimetype\": \"image/jpeg\",\n          \"size\": 193377\n        },\n        {\n          \"id\": \"5b240ea26f7230339151121d\",\n          \"url\": \"http://localhost:3001/api/v1/media/file/5b240ea26f7230339151121d\",\n          \"name\": \"RussianPassport-1.jpg\",\n          \"mimetype\": \"image/jpeg\",\n          \"size\": 411303\n        }\n      ],\n      \"validationComment\": null\n    },\n    \"approved\": {\n      \"country\": \"Russia\",\n      \"passport\": \"7505 612345\",\n      \"expirationDate\": \"2030-11-08T00:00:00.000Z\",\n      \"attachments\": [\n        {\n          \"id\": \"5b240ea26f7230339151121c\",\n          \"url\": \"http://localhost:3001/api/v1/media/file/5b240ea26f7230339151121c\",\n          \"name\": \"RussianPassport-0.jpg\",\n          \"mimetype\": \"image/jpeg\",\n          \"size\": 193377\n        },\n        {\n          \"id\": \"5b240ea26f7230339151121d\",\n          \"url\": \"http://localhost:3001/api/v1/media/file/5b240ea26f7230339151121d\",\n          \"name\": \"RussianPassport-1.jpg\",\n          \"mimetype\": \"image/jpeg\",\n          \"size\": 411303\n        }\n      ]\n    }\n  },\n  \"level4\": {\n    \"submitted\": {\n      \"state\": \"Chelyabinsk Region\",\n      \"city\": \"Chelyabinsk\",\n      \"zip\": \"454021\",\n      \"addressLine1\": \"Komsomolskiy av. 57\",\n      \"addressLine2\": \"Flat 55\",\n      \"attachments\": [\n        {\n          \"id\": \"5b240ea26f7230339151121c\",\n          \"url\": \"http://localhost:3001/api/v1/media/file/5b240ea26f7230339151121c\",\n          \"name\": \"RussianPassport-0.jpg\",\n          \"mimetype\": \"image/jpeg\",\n          \"size\": 193377\n        },\n        {\n          \"id\": \"5b240ea26f7230339151121d\",\n          \"url\": \"http://localhost:3001/api/v1/media/file/5b240ea26f7230339151121d\",\n          \"name\": \"RussianPassport-1.jpg\",\n          \"mimetype\": \"image/jpeg\",\n          \"size\": 411303\n        }\n      ],\n      \"validationComment\": null\n    },\n    \"approved\": {\n      \"state\": \"Chelyabinsk Region\",\n      \"city\": \"Chelyabinsk\",\n      \"zip\": \"454021\",\n      \"addressLine1\": \"Komsomolskiy av. 57\",\n      \"addressLine2\": \"Flat 55\",\n      \"attachments\": [\n        {\n          \"id\": \"5b240ea26f7230339151121c\",\n          \"url\": \"http://localhost:3001/api/v1/media/file/5b240ea26f7230339151121c\",\n          \"name\": \"RussianPassport-0.jpg\",\n          \"mimetype\": \"image/jpeg\",\n          \"size\": 193377\n        },\n        {\n          \"id\": \"5b240ea26f7230339151121d\",\n          \"url\": \"http://localhost:3001/api/v1/media/file/5b240ea26f7230339151121d\",\n          \"name\": \"RussianPassport-1.jpg\",\n          \"mimetype\": \"image/jpeg\",\n          \"size\": 411303\n        }\n      ]\n    }\n  },\n  \"notifications\": {\n    \"exchange\": {\n      \"sms\": {\n        \"userLoggedIn\": false,\n        \"profileUpdated\": false,\n        \"transferReceived\": false,\n        \"transferSent\": false,\n        \"limitOrderPublished\": false,\n        \"limitOrderFilled\": false,\n        \"limitOrderExpired\": false,\n        \"marketOrderExecuted\": false\n      },\n      \"email\": {\n        \"userLoggedIn\": false,\n        \"profileUpdated\": false,\n        \"transferReceived\": false,\n        \"transferSent\": false,\n        \"limitOrderPublished\": false,\n        \"limitOrderFilled\": false,\n        \"limitOrderExpired\": false,\n        \"marketOrderExecuted\": false\n      }\n    },\n    \"laborx\": {\n      \"sms\": {\n        \"userLoggedIn\": false,\n        \"profileUpdated\": false\n      },\n      \"email\": {\n        \"userLoggedIn\": false,\n        \"profileUpdated\": false\n      }\n    }\n  }\n}"
+				}
+			]
+		},
+		{
+			"name": "/api/v1/security/me/full",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{user1Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/security/me/full",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"security",
+						"me",
+						"full"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "d097e6c2-09e5-45c0-aa4d-724ca7b18e82",
+					"name": "/api/v1/security/me/full",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/security/me/full",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"security",
+								"me",
+								"full"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization",
+							"name": "Access-Control-Allow-Headers",
+							"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,PUT,POST,DELETE,OPTIONS",
+							"name": "Access-Control-Allow-Methods",
+							"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"name": "Content-Encoding",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 Jul 2018 10:11:27 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1430-77lh25npc9dUQRfC0wJ0SA\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "sameorigin",
+							"name": "x-frame-options",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Tue Jan 19 2038 08:14:07 GMT+0500 (+05)",
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"value": "en-US",
+							"key": "language"
+						}
+					],
+					"body": "{\n  \"worker\": {\n    \"id\": \"5b3b0e3a4a232d2a9ca59566\",\n    \"submitted\": {\n      \"regular\": {\n        \"hourlyCharge\": \"200\",\n        \"currencies\": [\n          {\n            \"id\": \"5b3b0e384a232d2a9ca5954d\",\n            \"symbol\": \"BTC\",\n            \"title\": \"Bitcoin\"\n          },\n          {\n            \"id\": \"5b3b0e384a232d2a9ca5954e\",\n            \"symbol\": \"ETH\",\n            \"title\": \"Ethereum\"\n          }\n        ]\n      },\n      \"verifiable\": {\n        \"intro\": \"JavaScript Developer, Frontend Developer\",\n        \"pageBackground\": {\n          \"id\": \"5b3b0e3a4a232d2a9ca59564\",\n          \"url\": \"https://res.cloudinary.com/dne93b2bj/image/upload/v1530596921/js3gkowt3k3ezjooyizv.png\"\n        },\n        \"attachments\": [\n          {\n            \"id\": \"5b3b0e3a4a232d2a9ca59565\",\n            \"url\": \"https://backend.profile.local.ntr1x.com/api/v1/media/file/5b3b0e3a4a232d2a9ca59565\",\n            \"name\": \"diploma.jpg\",\n            \"mimetype\": \"image/jpeg\",\n            \"size\": 308639\n          }\n        ]\n      },\n      \"custom\": {\n        \"schedule\": {\n          \"mon\": true,\n          \"tue\": true,\n          \"wed\": true,\n          \"thu\": true\n        }\n      },\n      \"socials\": [\n        {\n          \"id\": \"5b3b4bb0733e5d7e225f9fb6\",\n          \"name\": \"facebook\",\n          \"url\": \"https://www.facebook.com/annakendrick47/\"\n        }\n      ],\n      \"services\": [\n        {\n          \"id\": \"5b3b4bb0733e5d7e225f9fb8\",\n          \"name\": \"Software development\",\n          \"category\": {\n            \"id\": \"5b3b0e384a232d2a9ca59557\",\n            \"name\": \"Software development\",\n            \"code\": 8\n          },\n          \"description\": \"Web application development using Vue.js\",\n          \"minFee\": \"150\",\n          \"attachments\": []\n        }\n      ],\n      \"employments\": [\n        {\n          \"id\": \"5b3b4bb0733e5d7e225f9fb7\",\n          \"organization\": \"NTR\",\n          \"since\": \"2016-09-01T00:00:00.000Z\",\n          \"until\": \"2017-09-01T00:00:00.000Z\",\n          \"responsibilities\": \"Web application development\"\n        }\n      ]\n    },\n    \"approved\": {\n      \"regular\": {\n        \"hourlyCharge\": \"120\",\n        \"currencies\": [\n          {\n            \"id\": \"5b3b0e384a232d2a9ca5954d\",\n            \"symbol\": \"BTC\",\n            \"title\": \"Bitcoin\"\n          }\n        ]\n      },\n      \"verifiable\": {\n        \"intro\": \"JavaScript Developer, Frontend Developer\",\n        \"pageBackground\": {\n          \"id\": \"5b3b0e3a4a232d2a9ca59564\",\n          \"url\": \"https://res.cloudinary.com/dne93b2bj/image/upload/v1530596921/js3gkowt3k3ezjooyizv.png\"\n        },\n        \"attachments\": [\n          {\n            \"id\": \"5b3b0e3a4a232d2a9ca59565\",\n            \"url\": \"https://backend.profile.local.ntr1x.com/api/v1/media/file/5b3b0e3a4a232d2a9ca59565\",\n            \"name\": \"diploma.jpg\",\n            \"mimetype\": \"image/jpeg\",\n            \"size\": 308639\n          }\n        ]\n      },\n      \"custom\": {\n        \"schedule\": {\n          \"fri\": true,\n          \"thu\": true,\n          \"wed\": true,\n          \"tue\": true,\n          \"mon\": true\n        }\n      },\n      \"socials\": [\n        {\n          \"id\": \"5b3b0e3b4a232d2a9ca5956c\",\n          \"name\": \"facebook\",\n          \"url\": \"https://www.facebook.com/annakendrick47/\"\n        }\n      ],\n      \"services\": [\n        {\n          \"id\": \"5b3b0e3b4a232d2a9ca59569\",\n          \"name\": \"Software development\",\n          \"category\": {\n            \"id\": \"5b3b0e384a232d2a9ca59557\",\n            \"name\": \"Software development\",\n            \"code\": 8\n          },\n          \"description\": \"Web application development using Vue.js\",\n          \"minFee\": \"100\",\n          \"attachments\": []\n        }\n      ],\n      \"employments\": []\n    }\n  },\n  \"profile\": {\n    \"id\": \"5b3b0e364a232d2a9ca5953c\",\n    \"level1\": {\n      \"submitted\": null,\n      \"approved\": null\n    },\n    \"level2\": {\n      \"submitted\": null,\n      \"approved\": null\n    },\n    \"level3\": {\n      \"submitted\": null,\n      \"approved\": null\n    },\n    \"level4\": {\n      \"submitted\": null,\n      \"approved\": null\n    },\n    \"notifications\": {\n      \"exchange\": {\n        \"sms\": {\n          \"userLoggedIn\": false,\n          \"profileUpdated\": false,\n          \"transferReceived\": false,\n          \"transferSent\": false,\n          \"limitOrderPublished\": false,\n          \"limitOrderFilled\": false,\n          \"limitOrderExpired\": false,\n          \"marketOrderExecuted\": false\n        },\n        \"email\": {\n          \"userLoggedIn\": false,\n          \"profileUpdated\": false,\n          \"transferReceived\": false,\n          \"transferSent\": false,\n          \"limitOrderPublished\": false,\n          \"limitOrderFilled\": false,\n          \"limitOrderExpired\": false,\n          \"marketOrderExecuted\": false\n        }\n      },\n      \"laborx\": {\n        \"sms\": {\n          \"userLoggedIn\": false,\n          \"profileUpdated\": false\n        },\n        \"email\": {\n          \"userLoggedIn\": false,\n          \"profileUpdated\": false\n        }\n      }\n    },\n    \"signatures\": [\n      {\n        \"type\": \"ethereum-public-key\",\n        \"value\": \"0xdc802a564112ba85fd631553682063eb9788f80f4cdd65c6f47681bf218dc3d88f5c3dd1ff3a3c2c73b23077fb356d5d993a4b64d6537d59b7da957c91c300ac\"\n      }\n    ]\n  }\n}"
+				}
+			]
+		},
+		{
+			"name": "/api/v1/security/person",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/security/person?address=0x1134cc86b45039cc211c6d1d2e4b3c77f60207ed",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"security",
+						"person"
+					],
+					"query": [
+						{
+							"key": "address",
+							"value": "0x1134cc86b45039cc211c6d1d2e4b3c77f60207ed"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "27b641c7-345f-474d-b507-6fb5abaec6c3",
+					"name": "/api/v1/security/person",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/security/person?address=0x1134cc86b45039cc211c6d1d2e4b3c77f60207ed",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"security",
+								"person"
+							],
+							"query": [
+								{
+									"key": "address",
+									"value": "0x1134cc86b45039cc211c6d1d2e4b3c77f60207ed"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization",
+							"name": "Access-Control-Allow-Headers",
+							"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,PUT,POST,DELETE,OPTIONS",
+							"name": "Access-Control-Allow-Methods",
+							"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "235",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 15 Jun 2018 21:22:47 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"eb-7w8/A4gY84+nXPu9JXS9hg\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "sameorigin",
+							"name": "x-frame-options",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Tue Jan 19 2038 08:14:07 GMT+0500 (+05)",
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"value": "en-US",
+							"key": "language"
+						}
+					],
+					"body": "{\n  \"id\": \"5b240ea06f72303391511210\",\n  \"ipfsHash\": \"Qmf6aekhWgj3tAdPxvd834wvjxEeUD55jWc8z2fymh5r8Q\",\n  \"avatar\": \"https://res.cloudinary.com/dne93b2bj/image/upload/v1529089698/qdf5nryr9cvxemzprwa2.png\",\n  \"userName\": \"Igor Pavlenko\"\n}"
+				}
+			]
+		},
+		{
+			"name": "/api/v1/security/persons/query",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t\"0x1134cc86b45039cc211c6d1d2e4b3c77f60207ed\",\n\t\"0x623ec1e5096d5a682967e7994401173845763b44\",\n\t\"0x90892995479b0b96cea0bc332620d7464e0e6692\"\n]"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/security/persons/query",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"security",
+						"persons",
+						"query"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "cdd78df1-6f63-44f5-83c2-ac4f923d28e4",
+					"name": "/api/v1/security/person Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n\t\"0x1134cc86b45039cc211c6d1d2e4b3c77f60207ed\",\n\t\"0x623ec1e5096d5a682967e7994401173845763b44\",\n\t\"0x90892995479b0b96cea0bc332620d7464e0e6692\"\n]"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/security/persons/query",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"security",
+								"persons",
+								"query"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization",
+							"name": "Access-Control-Allow-Headers",
+							"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,PUT,POST,DELETE,OPTIONS",
+							"name": "Access-Control-Allow-Methods",
+							"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "541",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Jun 2018 13:20:28 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"21d-SIr6Zw8VFG3g0PsHkzZwPw\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "Vary",
+							"value": "X-HTTP-Method-Override, Accept-Encoding",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "sameorigin",
+							"name": "x-frame-options",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Tue Jan 19 2038 08:14:07 GMT+0500 (+05)",
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"value": "en-US",
+							"key": "language"
+						}
+					],
+					"body": "[\n  {\n    \"id\": \"5b2ab6f6308f573e6669460c\",\n    \"ipfsHash\": \"QmYYUA7VxN3ovJ2PRzpsPMUoXvYPJ9XbNPCQ23ye9nAv3Y\",\n    \"address\": \"0x1134cc86b45039cc211c6d1d2e4b3c77f60207ed\",\n    \"avatar\": \"https://res.cloudinary.com/dne93b2bj/image/upload/v1529531085/06-21-2018-02-44-43-Igor%20Pavlenko.png\",\n    \"userName\": \"Igor Pavlenko\"\n  },\n  {\n    \"id\": \"5b2ab6f6308f573e6669460d\",\n    \"address\": \"0x623ec1e5096d5a682967e7994401173845763b44\"\n  },\n  {\n    \"id\": \"5b2ab6f6308f573e6669460e\",\n    \"address\": \"0x90892995479b0b96cea0bc332620d7464e0e6692\"\n  }\n]"
+				}
+			]
+		},
+		{
+			"name": "/api/v1/security/signin/signature",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Signature 0x3878e330b384e83f614a621c57efedd2eef98eef609db5a3d1f1f8da1e79829f42f141a853951ad065f928334194e38ea056c45b5a5ee195e9d3da290202593a1b"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"purpose\": \"exchange\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/security/signin/signature",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"security",
+						"signin",
+						"signature"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "7051b744-82a6-4638-830f-57d58ad871ae",
+					"name": "/api/v1/security/signin/signature",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Signature 0x3878e330b384e83f614a621c57efedd2eef98eef609db5a3d1f1f8da1e79829f42f141a853951ad065f928334194e38ea056c45b5a5ee195e9d3da290202593a1b",
+								"disabled": false
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"purpose\": \"exchange\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/security/signin/signature",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"security",
+								"signin",
+								"signature"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization",
+							"name": "Access-Control-Allow-Headers",
+							"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,PUT,POST,DELETE,OPTIONS",
+							"name": "Access-Control-Allow-Methods",
+							"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"name": "Content-Encoding",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Jun 2018 13:17:52 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"527-Be1XqHG3eiAZ7/x1yoSATw\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Vary",
+							"value": "X-HTTP-Method-Override, Accept-Encoding",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "sameorigin",
+							"name": "x-frame-options",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Tue Jan 19 2038 08:14:07 GMT+0500 (+05)",
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"value": "en-US",
+							"key": "language"
+						}
+					],
+					"body": "{\n  \"token\": \"HPmieh7korcfYHvAxYFAaENSmPAVW3CVb2hTMgMfeLBr\",\n  \"profile\": {\n    \"id\": \"5b2ba5805853791584ad7c7c\",\n    \"level1\": {\n      \"submitted\": null,\n      \"approved\": null\n    },\n    \"level2\": {\n      \"submitted\": null,\n      \"approved\": null\n    },\n    \"level3\": {\n      \"submitted\": null,\n      \"approved\": null\n    },\n    \"level4\": {\n      \"submitted\": null,\n      \"approved\": null\n    },\n    \"notifications\": {\n      \"exchange\": {\n        \"sms\": {\n          \"userLoggedIn\": false,\n          \"profileUpdated\": false,\n          \"transferReceived\": false,\n          \"transferSent\": false,\n          \"limitOrderPublished\": false,\n          \"limitOrderFilled\": false,\n          \"limitOrderExpired\": false,\n          \"marketOrderExecuted\": false\n        },\n        \"email\": {\n          \"userLoggedIn\": false,\n          \"profileUpdated\": false,\n          \"transferReceived\": false,\n          \"transferSent\": false,\n          \"limitOrderPublished\": false,\n          \"limitOrderFilled\": false,\n          \"limitOrderExpired\": false,\n          \"marketOrderExecuted\": false\n        }\n      },\n      \"laborx\": {\n        \"sms\": {\n          \"userLoggedIn\": false,\n          \"profileUpdated\": false\n        },\n        \"email\": {\n          \"userLoggedIn\": false,\n          \"profileUpdated\": false\n        }\n      }\n    }\n  }\n}"
+				}
+			]
+		},
+		{
+			"name": "/me/profile/worker",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{user1Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"regular\": {\n\t    \"hourlyCharge\": \"200\",\n\t    \"currencies\": [ \"BTC\", \"ETH\" ]\n\t},\n\t\"verifiable\": {\n\t    \"intro\": \"JavaScript Developer, Frontend Developer\",\n\t    \"pageBackground\": \"5b3b0e3a4a232d2a9ca59564\",\n\t    \"attachments\": [ \"5b3b0e3a4a232d2a9ca59565\" ]\n\t},\n\t\"custom\": {\n\t    \"schedule\": {\n\t        \"thu\": true,\n\t        \"wed\": true,\n\t        \"tue\": true,\n\t        \"mon\": true\n\t    }\n\t},\n    \"socials\": [\n        {\n            \"name\": \"facebook\",\n            \"url\": \"https://www.facebook.com/annakendrick47/\"\n        }\n    ],\n    \"services\": [\n        {\n            \"name\": \"Software development\",\n            \"category\": 8,\n            \"description\": \"Web application development using Vue.js\",\n            \"minFee\": \"150\",\n            \"attachments\": []\n        }\n    ],\n    \"employments\": [\n        {\n            \"organization\": \"NTR\",\n            \"since\": \"2016-09-01T00:00:00.000Z\",\n            \"until\": \"2017-09-01T00:00:00.000Z\",\n            \"responsibilities\": \"Web application development\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/security/me/profile/worker",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"security",
+						"me",
+						"profile",
+						"worker"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "ba54265c-1eec-4003-9a1b-63ae30730e34",
+					"name": "/me/profile/worker",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"name": "Content-Type",
+								"value": "application/json",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"regular\": {\n\t    \"hourlyCharge\": \"200\",\n\t    \"currencies\": [ \"BTC\", \"ETH\" ]\n\t},\n\t\"verifiable\": {\n\t    \"intro\": \"JavaScript Developer, Frontend Developer\",\n\t    \"pageBackground\": \"5b3b0e3a4a232d2a9ca59564\",\n\t    \"attachments\": [ \"5b3b0e3a4a232d2a9ca59565\" ]\n\t},\n\t\"custom\": {\n\t    \"schedule\": {\n\t        \"thu\": true,\n\t        \"wed\": true,\n\t        \"tue\": true,\n\t        \"mon\": true\n\t    }\n\t},\n    \"socials\": [\n        {\n            \"name\": \"facebook\",\n            \"url\": \"https://www.facebook.com/annakendrick47/\"\n        }\n    ],\n    \"services\": [\n        {\n            \"name\": \"Software development\",\n            \"category\": 8,\n            \"description\": \"Web application development using Vue.js\",\n            \"minFee\": \"150\",\n            \"attachments\": []\n        }\n    ],\n    \"employments\": [\n        {\n            \"organization\": \"NTR\",\n            \"since\": \"2016-09-01T00:00:00.000Z\",\n            \"until\": \"2017-09-01T00:00:00.000Z\",\n            \"responsibilities\": \"Web application development\"\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/security/me/profile/worker",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"security",
+								"me",
+								"profile",
+								"worker"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization",
+							"name": "Access-Control-Allow-Headers",
+							"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,PUT,POST,DELETE,OPTIONS",
+							"name": "Access-Control-Allow-Methods",
+							"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"name": "Content-Encoding",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 Jul 2018 10:10:56 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d46-bAM0uVv0cDcZYYVJ5QHxiQ\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Vary",
+							"value": "X-HTTP-Method-Override, Accept-Encoding",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "sameorigin",
+							"name": "x-frame-options",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Tue Jan 19 2038 08:14:07 GMT+0500 (+05)",
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"value": "en-US",
+							"key": "language"
+						}
+					],
+					"body": "{\n  \"id\": \"5b3b0e3a4a232d2a9ca59566\",\n  \"submitted\": {\n    \"regular\": {\n      \"hourlyCharge\": \"200\",\n      \"currencies\": [\n        {\n          \"id\": \"5b3b0e384a232d2a9ca5954d\",\n          \"symbol\": \"BTC\",\n          \"title\": \"Bitcoin\"\n        },\n        {\n          \"id\": \"5b3b0e384a232d2a9ca5954e\",\n          \"symbol\": \"ETH\",\n          \"title\": \"Ethereum\"\n        }\n      ]\n    },\n    \"verifiable\": {\n      \"intro\": \"JavaScript Developer, Frontend Developer\",\n      \"pageBackground\": {\n        \"id\": \"5b3b0e3a4a232d2a9ca59564\",\n        \"url\": \"https://res.cloudinary.com/dne93b2bj/image/upload/v1530596921/js3gkowt3k3ezjooyizv.png\"\n      },\n      \"attachments\": [\n        {\n          \"id\": \"5b3b0e3a4a232d2a9ca59565\",\n          \"url\": \"https://backend.profile.local.ntr1x.com/api/v1/media/file/5b3b0e3a4a232d2a9ca59565\",\n          \"name\": \"diploma.jpg\",\n          \"mimetype\": \"image/jpeg\",\n          \"size\": 308639\n        }\n      ]\n    },\n    \"custom\": {\n      \"schedule\": {\n        \"mon\": true,\n        \"tue\": true,\n        \"wed\": true,\n        \"thu\": true\n      }\n    },\n    \"socials\": [\n      {\n        \"id\": \"5b3b4bb0733e5d7e225f9fb6\",\n        \"name\": \"facebook\",\n        \"url\": \"https://www.facebook.com/annakendrick47/\"\n      }\n    ],\n    \"services\": [\n      {\n        \"id\": \"5b3b4bb0733e5d7e225f9fb8\",\n        \"name\": \"Software development\",\n        \"category\": {\n          \"id\": \"5b3b0e384a232d2a9ca59557\",\n          \"name\": \"Software development\",\n          \"code\": 8\n        },\n        \"description\": \"Web application development using Vue.js\",\n        \"minFee\": \"150\",\n        \"attachments\": []\n      }\n    ],\n    \"employments\": [\n      {\n        \"id\": \"5b3b4bb0733e5d7e225f9fb7\",\n        \"organization\": \"NTR\",\n        \"since\": \"2016-09-01T00:00:00.000Z\",\n        \"until\": \"2017-09-01T00:00:00.000Z\",\n        \"responsibilities\": \"Web application development\"\n      }\n    ]\n  },\n  \"approved\": {\n    \"regular\": {\n      \"hourlyCharge\": \"120\",\n      \"currencies\": [\n        {\n          \"id\": \"5b3b0e384a232d2a9ca5954d\",\n          \"symbol\": \"BTC\",\n          \"title\": \"Bitcoin\"\n        }\n      ]\n    },\n    \"verifiable\": {\n      \"intro\": \"JavaScript Developer, Frontend Developer\",\n      \"pageBackground\": {\n        \"id\": \"5b3b0e3a4a232d2a9ca59564\",\n        \"url\": \"https://res.cloudinary.com/dne93b2bj/image/upload/v1530596921/js3gkowt3k3ezjooyizv.png\"\n      },\n      \"attachments\": [\n        {\n          \"id\": \"5b3b0e3a4a232d2a9ca59565\",\n          \"url\": \"https://backend.profile.local.ntr1x.com/api/v1/media/file/5b3b0e3a4a232d2a9ca59565\",\n          \"name\": \"diploma.jpg\",\n          \"mimetype\": \"image/jpeg\",\n          \"size\": 308639\n        }\n      ]\n    },\n    \"custom\": {\n      \"schedule\": {\n        \"fri\": true,\n        \"thu\": true,\n        \"wed\": true,\n        \"tue\": true,\n        \"mon\": true\n      }\n    },\n    \"socials\": [\n      {\n        \"id\": \"5b3b0e3b4a232d2a9ca5956c\",\n        \"name\": \"facebook\",\n        \"url\": \"https://www.facebook.com/annakendrick47/\"\n      }\n    ],\n    \"services\": [\n      {\n        \"id\": \"5b3b0e3b4a232d2a9ca59569\",\n        \"name\": \"Software development\",\n        \"category\": {\n          \"id\": \"5b3b0e384a232d2a9ca59557\",\n          \"name\": \"Software development\",\n          \"code\": 8\n        },\n        \"description\": \"Web application development using Vue.js\",\n        \"minFee\": \"100\",\n        \"attachments\": []\n      }\n    ],\n    \"employments\": []\n  }\n}"
+				}
+			]
+		},
+		{
+			"name": "/me/profile/recruiter",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{user1Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"verifiable\": {\n        \"intro\": \"I will find you a great software developer !!!!\",\n        \"pageBackground\": \"5b3b6b489cfaef425f7f9181\",\n        \"attachments\": [\"5b3b6b489cfaef425f7f9182\"]\n    },\n    \"custom\": {\n        \"showPackagesOnFirstJobBoard\": false,\n        \"another\": \"value\"\n    },\n    \"socials\": [\n        {\n            \"name\": \"facebook\",\n            \"url\": \"https://www.facebook.com/romanjosiofficial/\"\n        }\n    ],\n    \"services\": [\n        {\n            \"name\": \"Hiring\",\n            \"description\": \"Hiring staff for your business!\",\n            \"fee\": \"220\",\n            \"attachments\": []\n        },\n        {\n            \"name\": \"Training\",\n            \"description\": \"Training your employments =)\",\n            \"fee\": \"200\",\n            \"attachments\": []\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/security/me/profile/recruiter",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"security",
+						"me",
+						"profile",
+						"recruiter"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "8aa374e2-00a1-4a57-9440-24c7e7fefe53",
+					"name": "/me/profile/reqruiter",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"verifiable\": {\n        \"intro\": \"I will find you a great software developer !!!!\",\n        \"pageBackground\": \"5b3b6b489cfaef425f7f9181\",\n        \"attachments\": [\"5b3b6b489cfaef425f7f9182\"]\n    },\n    \"custom\": {\n        \"showPackagesOnFirstJobBoard\": false,\n        \"another\": \"value\"\n    },\n    \"socials\": [\n        {\n            \"name\": \"facebook\",\n            \"url\": \"https://www.facebook.com/romanjosiofficial/\"\n        }\n    ],\n    \"services\": [\n        {\n            \"name\": \"Hiring\",\n            \"description\": \"Hiring staff for your business!\",\n            \"fee\": \"220\",\n            \"attachments\": []\n        },\n        {\n            \"name\": \"Training\",\n            \"description\": \"Training your employments =)\",\n            \"fee\": \"200\",\n            \"attachments\": []\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/security/me/profile/reqruiter",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"security",
+								"me",
+								"profile",
+								"reqruiter"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization",
+							"name": "Access-Control-Allow-Headers",
+							"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,PUT,POST,DELETE,OPTIONS",
+							"name": "Access-Control-Allow-Methods",
+							"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"name": "Content-Encoding",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 Jul 2018 12:50:20 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9cf-plZ7A3a23do4ndsZsrTLRQ\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Vary",
+							"value": "X-HTTP-Method-Override, Accept-Encoding",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "sameorigin",
+							"name": "x-frame-options",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Tue Jan 19 2038 08:14:07 GMT+0500 (+05)",
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"value": "en-US",
+							"key": "language"
+						}
+					],
+					"body": "{\n  \"id\": \"5b3b6b489cfaef425f7f9183\",\n  \"submitted\": {\n    \"verifiable\": {\n      \"intro\": \"I will find you a great software developer !!!!\",\n      \"pageBackground\": {\n        \"id\": \"5b3b6b489cfaef425f7f9181\",\n        \"url\": \"https://res.cloudinary.com/dne93b2bj/image/upload/v1530620743/quj9dsmyfwmconyr7ayh.png\"\n      },\n      \"attachments\": [\n        {\n          \"id\": \"5b3b6b489cfaef425f7f9182\",\n          \"url\": \"https://backend.profile.local.ntr1x.com/api/v1/media/file/5b3b6b489cfaef425f7f9182\",\n          \"name\": \"diploma.jpg\",\n          \"mimetype\": \"image/jpeg\",\n          \"size\": 308639\n        }\n      ]\n    },\n    \"custom\": {\n      \"another\": \"value\",\n      \"showPackagesOnFirstJobBoard\": false\n    },\n    \"socials\": [\n      {\n        \"id\": \"5b3b710c6f4e4c5352cbcf87\",\n        \"name\": \"facebook\",\n        \"url\": \"https://www.facebook.com/romanjosiofficial/\"\n      }\n    ],\n    \"services\": [\n      {\n        \"id\": \"5b3b710c6f4e4c5352cbcf88\",\n        \"name\": \"Hiring\",\n        \"description\": \"Hiring staff for your business!\",\n        \"fee\": \"220\",\n        \"attachments\": []\n      },\n      {\n        \"id\": \"5b3b710c6f4e4c5352cbcf89\",\n        \"name\": \"Training\",\n        \"description\": \"Training your employments =)\",\n        \"fee\": \"200\",\n        \"attachments\": []\n      }\n    ]\n  },\n  \"approved\": {\n    \"verifiable\": {\n      \"intro\": \"I will find you a great software developer\",\n      \"pageBackground\": {\n        \"id\": \"5b3b6b489cfaef425f7f9181\",\n        \"url\": \"https://res.cloudinary.com/dne93b2bj/image/upload/v1530620743/quj9dsmyfwmconyr7ayh.png\"\n      },\n      \"attachments\": [\n        {\n          \"id\": \"5b3b6b489cfaef425f7f9182\",\n          \"url\": \"https://backend.profile.local.ntr1x.com/api/v1/media/file/5b3b6b489cfaef425f7f9182\",\n          \"name\": \"diploma.jpg\",\n          \"mimetype\": \"image/jpeg\",\n          \"size\": 308639\n        }\n      ]\n    },\n    \"custom\": {\n      \"showPackagesOnFirstJobBoard\": true\n    },\n    \"socials\": [\n      {\n        \"id\": \"5b3b6b489cfaef425f7f9186\",\n        \"name\": \"facebook\",\n        \"url\": \"https://www.facebook.com/romanjosiofficial/\"\n      }\n    ],\n    \"services\": [\n      {\n        \"id\": \"5b3b6b489cfaef425f7f9184\",\n        \"name\": \"Hiring\",\n        \"description\": \"Hiring staff for your business\",\n        \"fee\": \"120\",\n        \"attachments\": []\n      },\n      {\n        \"id\": \"5b3b6b489cfaef425f7f9185\",\n        \"name\": \"Training\",\n        \"description\": \"Training your employments\",\n        \"fee\": \"150\",\n        \"attachments\": []\n      }\n    ]\n  }\n}"
+				}
+			]
+		},
+		{
+			"name": "/me/profile/client",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{user1Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"verifiable\": {\n\t    \"name\": \"NTR\",\n\t    \"type\": \"organization\",\n\t    \"intro\": \"Software development\",\n\t    \"pageBackground\": \"5b3bd9e6beb3253d9256b239\",\n\t    \"website\": \"http://ntr1x.com\",\n\t    \"email\": \"team@ntr1x.com\",\n\t    \"attachments\": [\"5b3bd9e6beb3253d9256b23a\"]\n\t},\n\t\"regular\": {\n\t    \"specializations\": [8,7]\n\t},\n\t\"collaborators\": [\n\t    {\n\t        \"position\": \"CEO\",\n\t        \"user\": \"5b3bd9e1beb3253d9256b213\"\n\t    },\n\t    {\n\t        \"position\": \"Software Developer\",\n\t        \"user\": \"5b3bd9e1beb3253d9256b214\"\n\t    },\n\t    {\n\t        \"position\": \"Software Developer\",\n\t        \"user\": \"5b3bd9e1beb3253d9256b217\"\n\t    }\n\t]\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/security/me/profile/client",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"security",
+						"me",
+						"profile",
+						"client"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "8474b4d4-14fd-4c05-ac07-83432e2c634c",
+					"name": "/me/profile/reqruiter",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"verifiable\": {\n        \"intro\": \"I will find you a great software developer !!!!\",\n        \"pageBackground\": \"5b3b6b489cfaef425f7f9181\",\n        \"attachments\": [\"5b3b6b489cfaef425f7f9182\"]\n    },\n    \"custom\": {\n        \"showPackagesOnFirstJobBoard\": false,\n        \"another\": \"value\"\n    },\n    \"socials\": [\n        {\n            \"name\": \"facebook\",\n            \"url\": \"https://www.facebook.com/romanjosiofficial/\"\n        }\n    ],\n    \"services\": [\n        {\n            \"name\": \"Hiring\",\n            \"description\": \"Hiring staff for your business!\",\n            \"fee\": \"220\",\n            \"attachments\": []\n        },\n        {\n            \"name\": \"Training\",\n            \"description\": \"Training your employments =)\",\n            \"fee\": \"200\",\n            \"attachments\": []\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/security/me/profile/reqruiter",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"security",
+								"me",
+								"profile",
+								"reqruiter"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization",
+							"name": "Access-Control-Allow-Headers",
+							"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,PUT,POST,DELETE,OPTIONS",
+							"name": "Access-Control-Allow-Methods",
+							"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"name": "Content-Encoding",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 Jul 2018 12:50:20 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9cf-plZ7A3a23do4ndsZsrTLRQ\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Vary",
+							"value": "X-HTTP-Method-Override, Accept-Encoding",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "sameorigin",
+							"name": "x-frame-options",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Tue Jan 19 2038 08:14:07 GMT+0500 (+05)",
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"value": "en-US",
+							"key": "language"
+						}
+					],
+					"body": "{\n  \"id\": \"5b3b6b489cfaef425f7f9183\",\n  \"submitted\": {\n    \"verifiable\": {\n      \"intro\": \"I will find you a great software developer !!!!\",\n      \"pageBackground\": {\n        \"id\": \"5b3b6b489cfaef425f7f9181\",\n        \"url\": \"https://res.cloudinary.com/dne93b2bj/image/upload/v1530620743/quj9dsmyfwmconyr7ayh.png\"\n      },\n      \"attachments\": [\n        {\n          \"id\": \"5b3b6b489cfaef425f7f9182\",\n          \"url\": \"https://backend.profile.local.ntr1x.com/api/v1/media/file/5b3b6b489cfaef425f7f9182\",\n          \"name\": \"diploma.jpg\",\n          \"mimetype\": \"image/jpeg\",\n          \"size\": 308639\n        }\n      ]\n    },\n    \"custom\": {\n      \"another\": \"value\",\n      \"showPackagesOnFirstJobBoard\": false\n    },\n    \"socials\": [\n      {\n        \"id\": \"5b3b710c6f4e4c5352cbcf87\",\n        \"name\": \"facebook\",\n        \"url\": \"https://www.facebook.com/romanjosiofficial/\"\n      }\n    ],\n    \"services\": [\n      {\n        \"id\": \"5b3b710c6f4e4c5352cbcf88\",\n        \"name\": \"Hiring\",\n        \"description\": \"Hiring staff for your business!\",\n        \"fee\": \"220\",\n        \"attachments\": []\n      },\n      {\n        \"id\": \"5b3b710c6f4e4c5352cbcf89\",\n        \"name\": \"Training\",\n        \"description\": \"Training your employments =)\",\n        \"fee\": \"200\",\n        \"attachments\": []\n      }\n    ]\n  },\n  \"approved\": {\n    \"verifiable\": {\n      \"intro\": \"I will find you a great software developer\",\n      \"pageBackground\": {\n        \"id\": \"5b3b6b489cfaef425f7f9181\",\n        \"url\": \"https://res.cloudinary.com/dne93b2bj/image/upload/v1530620743/quj9dsmyfwmconyr7ayh.png\"\n      },\n      \"attachments\": [\n        {\n          \"id\": \"5b3b6b489cfaef425f7f9182\",\n          \"url\": \"https://backend.profile.local.ntr1x.com/api/v1/media/file/5b3b6b489cfaef425f7f9182\",\n          \"name\": \"diploma.jpg\",\n          \"mimetype\": \"image/jpeg\",\n          \"size\": 308639\n        }\n      ]\n    },\n    \"custom\": {\n      \"showPackagesOnFirstJobBoard\": true\n    },\n    \"socials\": [\n      {\n        \"id\": \"5b3b6b489cfaef425f7f9186\",\n        \"name\": \"facebook\",\n        \"url\": \"https://www.facebook.com/romanjosiofficial/\"\n      }\n    ],\n    \"services\": [\n      {\n        \"id\": \"5b3b6b489cfaef425f7f9184\",\n        \"name\": \"Hiring\",\n        \"description\": \"Hiring staff for your business\",\n        \"fee\": \"120\",\n        \"attachments\": []\n      },\n      {\n        \"id\": \"5b3b6b489cfaef425f7f9185\",\n        \"name\": \"Training\",\n        \"description\": \"Training your employments\",\n        \"fee\": \"150\",\n        \"attachments\": []\n      }\n    ]\n  }\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "`{{token}}`",
+				"type": "string"
+			}
+		]
+	}
+}
