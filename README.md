@@ -4,7 +4,8 @@
 
 1. Install node v8.9.4+, npm 5.6.0+, Yarn 1.3.2+
 2. Install and launch mongodb service
-3. Update these config files:
+3. Install and launch rabbitmq service
+4. Update these config files:
 
  - config/default.json
  - config/production.json
