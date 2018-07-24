@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "698ad6c0-d89e-4fd7-b63f-e2db6686ca4e",
+		"_postman_id": "de5efc84-cda7-4441-b216-ba80f69fcae2",
 		"name": "LaborX Profile",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -20,7 +20,10 @@
 				},
 				"method": "GET",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "{{baseUrl}}/api/v1/security/me",
 					"host": [
@@ -36,12 +39,15 @@
 			},
 			"response": [
 				{
-					"id": "d0611a06-2d67-4fc9-ac2e-2ea51e61aef9",
+					"id": "9c3b2c92-0a3a-4a41-9c24-3970ece84569",
 					"name": "/api/v1/security/me",
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{baseUrl}}/api/v1/security/me",
 							"host": [
@@ -134,7 +140,7 @@
 					],
 					"cookie": [
 						{
-							"expires": "Tue Jan 19 2038 08:14:07 GMT+0500 (+05)",
+							"expires": "Invalid Date",
 							"httpOnly": false,
 							"domain": "localhost",
 							"path": "/",
@@ -162,7 +168,10 @@
 				},
 				"method": "GET",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "{{baseUrl}}/api/v1/security/me/full",
 					"host": [
@@ -179,12 +188,15 @@
 			},
 			"response": [
 				{
-					"id": "d097e6c2-09e5-45c0-aa4d-724ca7b18e82",
+					"id": "8d81a054-4637-4106-8f9b-a033c1aa472d",
 					"name": "/api/v1/security/me/full",
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{baseUrl}}/api/v1/security/me/full",
 							"host": [
@@ -278,7 +290,7 @@
 					],
 					"cookie": [
 						{
-							"expires": "Tue Jan 19 2038 08:14:07 GMT+0500 (+05)",
+							"expires": "Invalid Date",
 							"httpOnly": false,
 							"domain": "localhost",
 							"path": "/",
@@ -296,7 +308,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "{{baseUrl}}/api/v1/security/person?address=0x1134cc86b45039cc211c6d1d2e4b3c77f60207ed",
 					"host": [
@@ -318,12 +333,15 @@
 			},
 			"response": [
 				{
-					"id": "27b641c7-345f-474d-b507-6fb5abaec6c3",
+					"id": "73d367b3-96e5-4ae2-abf0-61326c8f190c",
 					"name": "/api/v1/security/person",
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{baseUrl}}/api/v1/security/person?address=0x1134cc86b45039cc211c6d1d2e4b3c77f60207ed",
 							"host": [
@@ -416,7 +434,7 @@
 					],
 					"cookie": [
 						{
-							"expires": "Tue Jan 19 2038 08:14:07 GMT+0500 (+05)",
+							"expires": "Invalid Date",
 							"httpOnly": false,
 							"domain": "localhost",
 							"path": "/",
@@ -459,7 +477,7 @@
 			},
 			"response": [
 				{
-					"id": "cdd78df1-6f63-44f5-83c2-ac4f923d28e4",
+					"id": "db09d7c0-5e31-49cb-a6d3-81ef8c3b5678",
 					"name": "/api/v1/security/person Copy",
 					"originalRequest": {
 						"method": "POST",
@@ -467,8 +485,7 @@
 							{
 								"key": "Content-Type",
 								"name": "Content-Type",
-								"value": "application/json",
-								"disabled": false
+								"value": "application/json"
 							}
 						],
 						"body": {
@@ -562,7 +579,7 @@
 					],
 					"cookie": [
 						{
-							"expires": "Tue Jan 19 2038 08:14:07 GMT+0500 (+05)",
+							"expires": "Invalid Date",
 							"httpOnly": false,
 							"domain": "localhost",
 							"path": "/",
@@ -612,21 +629,19 @@
 			},
 			"response": [
 				{
-					"id": "7051b744-82a6-4638-830f-57d58ad871ae",
+					"id": "680a7e84-0d0b-44b9-9b5b-e2a5b4ea9995",
 					"name": "/api/v1/security/signin/signature",
 					"originalRequest": {
 						"method": "POST",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Signature 0x3878e330b384e83f614a621c57efedd2eef98eef609db5a3d1f1f8da1e79829f42f141a853951ad065f928334194e38ea056c45b5a5ee195e9d3da290202593a1b",
-								"disabled": false
+								"value": "Signature 0x3878e330b384e83f614a621c57efedd2eef98eef609db5a3d1f1f8da1e79829f42f141a853951ad065f928334194e38ea056c45b5a5ee195e9d3da290202593a1b"
 							},
 							{
 								"key": "Content-Type",
 								"name": "Content-Type",
-								"value": "application/json",
-								"disabled": false
+								"value": "application/json"
 							}
 						],
 						"body": {
@@ -726,7 +741,7 @@
 					],
 					"cookie": [
 						{
-							"expires": "Tue Jan 19 2038 08:14:07 GMT+0500 (+05)",
+							"expires": "Invalid Date",
 							"httpOnly": false,
 							"domain": "localhost",
 							"path": "/",
@@ -780,7 +795,7 @@
 			},
 			"response": [
 				{
-					"id": "ba54265c-1eec-4003-9a1b-63ae30730e34",
+					"id": "a4e7bb67-79a8-4d97-92cb-effec1edfb57",
 					"name": "/me/profile/worker",
 					"originalRequest": {
 						"method": "POST",
@@ -789,8 +804,7 @@
 								"key": "Content-Type",
 								"type": "text",
 								"name": "Content-Type",
-								"value": "application/json",
-								"disabled": false
+								"value": "application/json"
 							}
 						],
 						"body": {
@@ -891,7 +905,7 @@
 					],
 					"cookie": [
 						{
-							"expires": "Tue Jan 19 2038 08:14:07 GMT+0500 (+05)",
+							"expires": "Invalid Date",
 							"httpOnly": false,
 							"domain": "localhost",
 							"path": "/",
@@ -945,15 +959,14 @@
 			},
 			"response": [
 				{
-					"id": "8aa374e2-00a1-4a57-9440-24c7e7fefe53",
+					"id": "836286c4-8363-4e71-afec-af1f2e4e4bfe",
 					"name": "/me/profile/reqruiter",
 					"originalRequest": {
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"disabled": false
+								"value": "application/json"
 							}
 						],
 						"body": {
@@ -1054,7 +1067,7 @@
 					],
 					"cookie": [
 						{
-							"expires": "Tue Jan 19 2038 08:14:07 GMT+0500 (+05)",
+							"expires": "Invalid Date",
 							"httpOnly": false,
 							"domain": "localhost",
 							"path": "/",
@@ -1108,15 +1121,14 @@
 			},
 			"response": [
 				{
-					"id": "8474b4d4-14fd-4c05-ac07-83432e2c634c",
+					"id": "2d27b72d-671e-4523-8485-cc1a6ae021ba",
 					"name": "/me/profile/reqruiter",
 					"originalRequest": {
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"disabled": false
+								"value": "application/json"
 							}
 						],
 						"body": {
@@ -1217,7 +1229,7 @@
 					],
 					"cookie": [
 						{
-							"expires": "Tue Jan 19 2038 08:14:07 GMT+0500 (+05)",
+							"expires": "Invalid Date",
 							"httpOnly": false,
 							"domain": "localhost",
 							"path": "/",
@@ -1229,6 +1241,105 @@
 					"body": "{\n  \"id\": \"5b3b6b489cfaef425f7f9183\",\n  \"submitted\": {\n    \"verifiable\": {\n      \"intro\": \"I will find you a great software developer !!!!\",\n      \"pageBackground\": {\n        \"id\": \"5b3b6b489cfaef425f7f9181\",\n        \"url\": \"https://res.cloudinary.com/dne93b2bj/image/upload/v1530620743/quj9dsmyfwmconyr7ayh.png\"\n      },\n      \"attachments\": [\n        {\n          \"id\": \"5b3b6b489cfaef425f7f9182\",\n          \"url\": \"https://backend.profile.local.ntr1x.com/api/v1/media/file/5b3b6b489cfaef425f7f9182\",\n          \"name\": \"diploma.jpg\",\n          \"mimetype\": \"image/jpeg\",\n          \"size\": 308639\n        }\n      ]\n    },\n    \"custom\": {\n      \"another\": \"value\",\n      \"showPackagesOnFirstJobBoard\": false\n    },\n    \"socials\": [\n      {\n        \"id\": \"5b3b710c6f4e4c5352cbcf87\",\n        \"name\": \"facebook\",\n        \"url\": \"https://www.facebook.com/romanjosiofficial/\"\n      }\n    ],\n    \"services\": [\n      {\n        \"id\": \"5b3b710c6f4e4c5352cbcf88\",\n        \"name\": \"Hiring\",\n        \"description\": \"Hiring staff for your business!\",\n        \"fee\": \"220\",\n        \"attachments\": []\n      },\n      {\n        \"id\": \"5b3b710c6f4e4c5352cbcf89\",\n        \"name\": \"Training\",\n        \"description\": \"Training your employments =)\",\n        \"fee\": \"200\",\n        \"attachments\": []\n      }\n    ]\n  },\n  \"approved\": {\n    \"verifiable\": {\n      \"intro\": \"I will find you a great software developer\",\n      \"pageBackground\": {\n        \"id\": \"5b3b6b489cfaef425f7f9181\",\n        \"url\": \"https://res.cloudinary.com/dne93b2bj/image/upload/v1530620743/quj9dsmyfwmconyr7ayh.png\"\n      },\n      \"attachments\": [\n        {\n          \"id\": \"5b3b6b489cfaef425f7f9182\",\n          \"url\": \"https://backend.profile.local.ntr1x.com/api/v1/media/file/5b3b6b489cfaef425f7f9182\",\n          \"name\": \"diploma.jpg\",\n          \"mimetype\": \"image/jpeg\",\n          \"size\": 308639\n        }\n      ]\n    },\n    \"custom\": {\n      \"showPackagesOnFirstJobBoard\": true\n    },\n    \"socials\": [\n      {\n        \"id\": \"5b3b6b489cfaef425f7f9186\",\n        \"name\": \"facebook\",\n        \"url\": \"https://www.facebook.com/romanjosiofficial/\"\n      }\n    ],\n    \"services\": [\n      {\n        \"id\": \"5b3b6b489cfaef425f7f9184\",\n        \"name\": \"Hiring\",\n        \"description\": \"Hiring staff for your business\",\n        \"fee\": \"120\",\n        \"attachments\": []\n      },\n      {\n        \"id\": \"5b3b6b489cfaef425f7f9185\",\n        \"name\": \"Training\",\n        \"description\": \"Training your employments\",\n        \"fee\": \"150\",\n        \"attachments\": []\n      }\n    ]\n  }\n}"
 				}
 			]
+		},
+		{
+			"name": "/me/profile/recruiter",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/security/me/profile/recruiter",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"security",
+						"me",
+						"profile",
+						"recruiter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/me/profile/client",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/security/me/profile/client",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"security",
+						"me",
+						"profile",
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/me/profile/worker",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/security/me/profile/worker",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"security",
+						"me",
+						"profile",
+						"worker"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"auth": {

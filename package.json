@@ -6,7 +6,7 @@
     "amqplib": "^0.5.2",
     "async": "2.1.4",
     "axios": "^0.18.0",
-    "bignumber.js": "^6.0.0",
+    "bignumber.js": "^7.2.1",
     "bs58": "^4.0.1",
     "cloudinary": "1.7.0",
     "config": "^1.28.0",
