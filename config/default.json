@@ -31,5 +31,17 @@
         "pass": "place-your-password-here"
       }
     }
+  },
+  "example-log": {
+    "file": {
+      "type": "rotating-file",
+      "path": "/var/log/laborx.profile.backend/backend.log",
+      "period": "1d",
+      "count": 3
+    },
+    "options": {
+      "src": false
+    },
+    "level": "info"
   }
 }
