@@ -16,6 +16,9 @@
     "url": "amqp://guest:guest@localhost:5672",
     "reconnectTimeout" : 1000
   },
+  "frontend": {
+    "url": "https://exchange.tp.ntr1x.com"
+  },
   "mail": {
     "from": "place-your-from@address.here",
     "baseURL": "http://localhost:8080",
@@ -28,5 +31,17 @@
         "pass": "place-your-password-here"
       }
     }
+  },
+  "example-log": {
+    "file": {
+      "type": "rotating-file",
+      "path": "/var/log/laborx.profile.backend/backend.log",
+      "period": "1d",
+      "count": 3
+    },
+    "options": {
+      "src": false
+    },
+    "level": "info"
   }
 }
