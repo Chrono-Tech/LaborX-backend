@@ -32,6 +32,11 @@
       }
     }
   },
+  "sms": {
+    "accountSid": "place-account-sid-here",
+    "authToken": "palce-auth-token-here",
+    "from": "place-from-phone-number-here"
+  },
   "example-log": {
     "file": {
       "type": "rotating-file",
